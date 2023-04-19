@@ -6,9 +6,10 @@ import './App.css';
 function App() {
   const [posts, setPosts] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
-
+  const filterNumber = 30;
+  
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${filterNumber}`)
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
