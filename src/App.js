@@ -1,7 +1,7 @@
-import './App.css';
 import Post from '../src/components/posts/Post';
 import Search from '../src/components/search/Search';
 import { useEffect , useState } from 'react';
+import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([]);
